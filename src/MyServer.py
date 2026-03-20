@@ -1,7 +1,8 @@
 import os
 import time
 import webbrowser
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler
+from http.server import HTTPServer
 from urllib.parse import parse_qs
 
 hostName = "localhost"
@@ -42,6 +43,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(303)
         self.send_header("Location", "/")
         self.end_headers()
+
 
 def run_server():
     webServer = HTTPServer((hostName, serverPort), MyServer)
