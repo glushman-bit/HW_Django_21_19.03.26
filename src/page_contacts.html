@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!--    <link rel="stylesheet" href="style.css" />-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background: #212529;
+            color: white;
+            position: fixed;
+            width: 250px;
+        }
+
+        .sidebar a {
+            color: #adb5bd;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background: #0d6efd;
+            color: white;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 30px;
+        }
+
+        .card-img-top {
+            background: #6c757d;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar d-flex flex-column p-4">
+    <h5 class="text-white">☰ Меню</h5>
+    <hr>
+
+    <a href="#"> Главная</a>
+    <a href="#"> Категории</a>
+    <a href="#"> Заказы</a>
+    <a href="#"> Контакты</a>
+
+    <div class="mt-auto">
+        <div class="dropup-center dropup">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Пользователь
+            </button>
+            <ul class="dropdown-menu bg-secondary">
+                <li><a class="dropdown-item" href="#">Профиль</a></li>
+                <li><a class="dropdown-item" href="#">Выход</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <h1 class="text-center mb-4">Контакты</h1>
+
+    <div class="row">
+
+        <!-- Карточка -->
+        <div class="col-6 mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" action="/">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Имя"/>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Email@example.ru"/>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить</button>
+                    </form>
+                </div>
+                </div>
+        </div>
+        <div class="col-md-6 mt-5">
+            <h3 class="text">Наши контакты</h3>
+            <p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities.
+                Classes are applied to the element itself or sometimes the parent element.
+                These classes can be customized as needed with our utility API.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
